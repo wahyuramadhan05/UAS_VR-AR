@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Wahyu Ramadhan</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js" ></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
-
 <body>
-<a-scene vr-mode-ui="enabled:false" renderer="logarithmicDeepBuffer:true; precission:medium;" embedded arjs="trackingMethod:best; sourcetype:webcam;debugUIEnabled:false">
-<a-assets>
-<img id="foto" src="foto/selfie.png"></img>
-<a-asset-item id="model" src="model/spiderman.glb"></a-asset-item>
-</a-assets>
-<a-marker preset="custom" type="pattern" url="pattern/pattern-Asia.patt">
-<a-image src="#foto" height="3" width="3" position="-1 0 0" rotation="0 0 0"></a-image>
-<a-entity gltf-model="#model" position="3 0 0" rotation="0 0 0"></a-entity>
-</a-marker>
-<a-entity camera></a-entity>
+    <a-scene vr-mode-ui="enabled:false" renderer="logarithmicDepthBuffer:true; precision:medium;" embedded arjs="trackingMethod:best; sourcetype:webcam; debugUIEnabled:false">
+        <a-assets>
+            <img id="foto" src="foto/selfie.png"></img>
+            <a-asset-item id="model" src="model/spiderman.glb"></a-asset-item>
+        </a-assets>
+        <a-marker preset="custom" type="pattern" url="pattern/pattern-Asia.patt">
+            <a-image src="#foto" height="3" width="3" position="-1 0 0" rotation="0 0 0"></a-image>
+            <a-entity gltf-model="#model" position="3 0 0" rotation="0 0 0"></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
 </body>
-
 </html>
